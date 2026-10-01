@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color: #2b2928; background: #f8f5ef; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f8f5ef; font-family: Arial, sans-serif; }
+.hero { position: relative; isolation: isolate; background: linear-gradient(100deg, rgba(24, 31, 29, .78), rgba(24, 31, 29, .18)), url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85") center/cover; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(20, 28, 25, .5), transparent 60%); }
+.eyebrow, .label { font-size: 10px; letter-spacing: .28em; font-weight: 700; color: #778678; }
+.label { color: #8d7066; }
+.photo-card { min-height: 360px; position: relative; background-position: center; background-size: cover; display: flex; align-items: end; padding: 1.25rem; }
+.photo-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 55%, rgba(22, 28, 25, .55)); }
+.photo-card span { position: relative; z-index: 1; color: white; font-family: Georgia, serif; font-style: italic; font-size: 1.5rem; }
+.photo-one { background-image: url("https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80"); }
+.photo-two { background-image: url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80"); }
+.photo-three { background-image: url("https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=80"); }
+.form-label { display: block; font-size: .75rem; letter-spacing: .08em; color: rgba(255,255,255,.75); }
+.form-label span { color: #d4b5a6; }
+.form-input { margin-top: .75rem; width: 100%; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.06); padding: .9rem 1rem; color: white; outline: none; }
+.form-input::placeholder { color: rgba(255,255,255,.3); }
+.form-input:focus { border-color: #d4b5a6; }
+.choice { display: flex; cursor: pointer; align-items: center; justify-content: center; gap: .6rem; border: 1px solid rgba(255,255,255,.2); padding: .9rem; font-size: .875rem; color: rgba(255,255,255,.7); transition: border-color .2s, background .2s; }
+.choice input { accent-color: #d4b5a6; }
+.choice-selected { border-color: #d4b5a6; background: rgba(212,181,166,.13); color: white; }
+.form-error { margin-top: .5rem; font-size: .75rem; color: #f0b1a5; }
