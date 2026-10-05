@@ -1,4 +1,8 @@
+import Image from "next/image";
 import RSVPForm from "@/components/RSVPForm";
+import couplePhoto1 from "../../image/2.jpg";
+import couplePhoto2 from "../../image/3.jpg";
+import couplePhoto3 from "../../image/10.jpg";
 
 export default function HomePage() {
   return (
@@ -25,7 +29,15 @@ export default function HomePage() {
             <span>HIROSHIMA</span>
           </div>
         </div>
-        <div className="hero-image" role="img" aria-label="ShotaとHikaruの仮メイン写真">
+        <div className="hero-image" role="img" aria-label="ShotaとHikaruの写真">
+          <Image
+            className="hero-photo"
+            src={couplePhoto1}
+            alt=""
+            fill
+            priority
+            sizes="(max-width: 760px) 100vw, 50vw"
+          />
           <p>Shota <i>&amp;</i> Hikaru</p>
         </div>
         <a href="#details" className="scroll-cue">SCROLL TO THE B-SIDE ↓</a>
@@ -43,7 +55,15 @@ export default function HomePage() {
       </section>
 
       <section className="message-section">
-        <div className="message-photo" role="img" aria-label="ShotaとHikaruの仮写真" />
+        <div className="message-photo" role="img" aria-label="ShotaとHikaruの写真">
+          <Image
+            className="message-photo-image"
+            src={couplePhoto2}
+            alt=""
+            fill
+            sizes="(max-width: 760px) 100vw, 50vw"
+          />
+        </div>
         <div className="message-copy">
           <p className="section-number">A MESSAGE FROM US</p>
           <h2>To our<br /><em>favorite people.</em></h2>
@@ -104,6 +124,13 @@ export default function HomePage() {
         </div>
         <div className="gallery-grid">
           <figure className="gallery-photo gallery-host">
+            <Image
+              className="gallery-host-image"
+              src={couplePhoto3}
+              alt=""
+              fill
+              sizes="(max-width: 760px) 100vw, 66vw"
+            />
             <figcaption>Shota &amp; Hikaru</figcaption>
           </figure>
           <figure className="gallery-photo gallery-party">
@@ -113,7 +140,7 @@ export default function HomePage() {
             <figcaption>Good food</figcaption>
           </figure>
         </div>
-        <p className="photo-note">主催者写真は本番写真をご用意いただいた後に差し替えます。</p>
+        <p className="photo-note">写真は今後追加・調整予定です。</p>
       </section>
 
       <section id="rsvp" className="rsvp-section">
