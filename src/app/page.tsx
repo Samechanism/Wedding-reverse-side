@@ -35,7 +35,7 @@ export default function HomePage() {
             src={couplePhoto1}
             alt=""
             fill
-            priority
+            preload
             sizes="(max-width: 760px) 100vw, 50vw"
           />
           <p>Shota <i>&amp;</i> Hikaru</p>
